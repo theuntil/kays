@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KAYS — Kayseri KAYS geliyor</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+.logo{
+height:100px;
+margin-bottom:22px;
+animation:fadeUp .7s ease;
+}
+.logo{
+height:100px;
+margin-bottom:22px;
+animation:fadeUp .7s ease;
+}
+body{
+font-family:Inter,system-ui;
+background:#000;
+color:white;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+
+/* SVG background */
+
+.bg{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:.25;
+z-index:0;
+}
+
+/* container */
+
+.container{
+position:relative;
+z-index:2;
+text-align:center;
+max-width:900px;
+padding:40px;
+}
+
+h1{
+font-size:60px;
+font-weight:700;
+letter-spacing:-1px;
+margin-bottom:12px;
+animation:fadeUp .9s ease;
+}
+
+.subtitle{
+opacity:.7;
+font-size:18px;
+margin-bottom:45px;
+animation:fadeUp 1.2s ease;
+}
+
+/* countdown */
+
+.countdown{
+display:flex;
+gap:22px;
+justify-content:center;
+margin-bottom:60px;
+}
+
+.time{
+background:#111;
+padding:24px 26px;
+border-radius:14px;
+min-width:120px;
+backdrop-filter:blur(12px);
+box-shadow:0 10px 40px rgba(0,0,0,.6);
+animation:fadeUp 1.6s ease;
+}
+
+.number{
+font-size:36px;
+font-weight:700;
+}
+
+.label{
+opacity:.5;
+font-size:13px;
+margin-top:6px;
+}
+
+/* store buttons */
+
+.stores{
+display:flex;
+gap:16px;
+justify-content:center;
+animation:fadeUp 2s ease;
+}
+
+.store{
+display:flex;
+align-items:center;
+gap:10px;
+padding:14px 22px;
+border-radius:20px;
+background:#fff;
+text-decoration:none;
+color:BLACK;
+font-weight:500;
+transition:.25s;
+}
+
+.store:hover{
+transform:translateY(-3px);
+background:#222;
+}
+
+.store img{
+height:20px;
+}
+
+/* animations */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
+
+@media (max-width:700px){
+
+h1{
+font-size:34px;
+}
+
+.subtitle{
+font-size:15px;
+margin-bottom:35px;
+}
+
+.countdown{
+gap:10px;
+}
+
+.time{
+min-width:65px;
+padding:12px 10px;
+}
+
+.number{
+font-size:20px;
+}
+
+.label{
+font-size:11px;
+}
+
+.stores{
+
+gap:12px;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- SVG BACKGROUND -->
+
+<img src="image.svg" class="bg">
+
+
+<div class="container">
+<img src="kays.png" class="logo">
+<h1>Kayseri KAYS'ta!</h1>
+
+<p class="subtitle">
+Kayseri'nin Super App'i KAYS, 1 Nisan 2026'da sizlerle buluşuyor. Tüm ihtiyaçlarınız tek bir uygulamada, çok yakında!
+</p>
+
+
+<div class="countdown">
+
+<div class="time">
+<div class="number" id="days">0</div>
+<div class="label">Gün</div>
+</div>
+
+<div class="time">
+<div class="number" id="hours">0</div>
+<div class="label">Saat</div>
+</div>
+
+<div class="time">
+<div class="number" id="minutes">0</div>
+<div class="label">Dakika</div>
+</div>
+
+<div class="time">
+<div class="number" id="seconds">0</div>
+<div class="label">Saniye</div>
+</div>
+
+</div>
+
+
+<div class="stores">
+
+<a class="store" href="https://apps.apple.com/us/developer/rovand-ltd/id1877911901">
+<img src="https://cdn-icons-png.flaticon.com/512/0/747.png">
+App Store
+</a>
+
+<a class="store" href="https://play.google.com/store/apps/dev?id=7529641658741841420">
+<img src="https://cdn-icons-png.flaticon.com/512/888/888857.png">
+Google Play
+</a>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+const launch = new Date("2026-04-01T00:00:00").getTime()
+
+setInterval(()=>{
+
+const now = new Date().getTime()
+
+const distance = launch - now
+
+const days = Math.floor(distance / (1000*60*60*24))
+const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60))
+const minutes = Math.floor((distance % (1000*60*60)) / (1000*60))
+const seconds = Math.floor((distance % (1000*60)) / 1000)
+
+document.getElementById("days").innerText = days
+document.getElementById("hours").innerText = hours
+document.getElementById("minutes").innerText = minutes
+document.getElementById("seconds").innerText = seconds
+
+},1000)
+
+</script>
+
+
+</body>
+</html>
