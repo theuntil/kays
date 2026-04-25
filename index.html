@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>KAYS — Kayseri KAYS geliyor</title>
-
+<link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/500px-Podcasts_%28iOS%29.svg.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -16,195 +16,210 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 }
-.logo{
-height:100px;
-margin-bottom:22px;
-animation:fadeUp .7s ease;
-}
-.logo{
-height:100px;
-margin-bottom:22px;
-animation:fadeUp .7s ease;
-}
+
 body{
 font-family:Inter,system-ui;
 background:#000;
 color:white;
-height:100vh;
+min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 overflow:hidden;
 }
 
-/* SVG background */
-
+/* BG */
 .bg{
 position:absolute;
 inset:0;
 width:100%;
 height:100%;
 object-fit:cover;
-opacity:.25;
-z-index:0;
+opacity:.18;
 }
 
-/* container */
-
+/* CONTAINER */
 .container{
 position:relative;
 z-index:2;
 text-align:center;
-max-width:900px;
-padding:40px;
+max-width:760px;
+padding:30px 20px;
 }
 
+/* LOGO */
+.logo{
+height:80px;
+margin-bottom:18px;
+}
+
+/* TITLE */
 h1{
-font-size:60px;
+font-size:48px;
 font-weight:700;
-letter-spacing:-1px;
-margin-bottom:12px;
-animation:fadeUp .9s ease;
+margin-bottom:10px;
 }
 
+/* SUBTITLE */
 .subtitle{
-opacity:.7;
-font-size:18px;
-margin-bottom:45px;
-animation:fadeUp 1.2s ease;
+opacity:.65;
+font-size:16px;
+margin-bottom:28px;
+line-height:1.5;
 }
 
-/* countdown */
+/* FEATURES (ULTRA MINIMAL) */
+.features{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+margin-bottom:35px;
+}
 
+.feature{
+display:flex;
+align-items:center;
+gap:8px;
+padding:10px 14px;
+border-radius:999px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(14px);
+border:1px solid rgba(255,255,255,0.08);
+font-size:13px;
+opacity:.8;
+transition:.2s;
+}
+
+.feature:hover{
+background:rgba(255,255,255,0.08);
+}
+
+.feature img{
+height:16px;
+}
+
+/* COUNTDOWN (LIGHT) */
 .countdown{
 display:flex;
-gap:22px;
 justify-content:center;
-margin-bottom:60px;
+gap:16px;
+margin-bottom:40px;
 }
 
 .time{
-background:#111;
-padding:24px 26px;
-border-radius:14px;
-min-width:120px;
-backdrop-filter:blur(12px);
-box-shadow:0 10px 40px rgba(0,0,0,.6);
-animation:fadeUp 1.6s ease;
+text-align:center;
 }
 
 .number{
-font-size:36px;
-font-weight:700;
+font-size:28px;
+font-weight:600;
 }
 
 .label{
+font-size:11px;
 opacity:.5;
-font-size:13px;
-margin-top:6px;
 }
 
-/* store buttons */
-
+/* STORES */
 .stores{
 display:flex;
-gap:16px;
+gap:12px;
 justify-content:center;
-animation:fadeUp 2s ease;
+margin-bottom:25px;
 }
 
 .store{
 display:flex;
 align-items:center;
-gap:10px;
-padding:14px 22px;
-border-radius:20px;
-background:#fff;
+gap:8px;
+padding:10px 16px;
+border-radius:999px;
+background:rgba(255,255,255,0.9);
+color:#000;
+font-size:13px;
 text-decoration:none;
-color:BLACK;
-font-weight:500;
-transition:.25s;
+transition:.2s;
 }
 
 .store:hover{
-transform:translateY(-3px);
-background:#222;
+transform:scale(1.05);
 }
 
 .store img{
-height:20px;
+height:16px;
 }
 
-/* animations */
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+/* CONTACT */
+.contact{
+font-size:12px;
+opacity:.4;
 }
 
 /* MOBILE */
+@media (max-width:600px){
 
-@media (max-width:700px){
+h1{ font-size:32px; }
 
-h1{
-font-size:34px;
-}
+.subtitle{ font-size:14px; }
 
-.subtitle{
-font-size:15px;
-margin-bottom:35px;
-}
-
-.countdown{
-gap:10px;
-}
-
-.time{
-min-width:65px;
-padding:12px 10px;
-}
-
-.number{
-font-size:20px;
-}
-
-.label{
-font-size:11px;
-}
-
-.stores{
-
-gap:12px;
-}
+.number{ font-size:22px; }
 
 }
 
 </style>
 </head>
 
-
 <body>
-
-<!-- SVG BACKGROUND -->
 
 <img src="image.svg" class="bg">
 
-
 <div class="container">
+
 <img src="kays.png" class="logo">
-<h1>Kayseri KAYS'ta!</h1>
+
+
 
 <p class="subtitle">
-Kayseri'nin Super App'i KAYS, 1 Nisan 2026'da sizlerle buluşuyor. Tüm ihtiyaçlarınız tek bir uygulamada, çok yakında!
+Kayseri'nin Super App'i KAYS, 20 Mayıs'ta sizlerle buluşuyor. Tüm ihtiyaçlarınız tek bir uygulamada, çok yakında.
 </p>
 
+<!-- FEATURES -->
+<div class="features">
 
+<div class="feature">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Uk_tram_icon_white.png">
+Ulaşım
+</div>
+
+<div class="feature">
+<img src="https://static.vecteezy.com/system/resources/thumbnails/070/915/066/small/white-3d-plus-sign-isolated-on-transparent-background-png.png">
+İlanlar
+</div>
+
+<div class="feature">
+<img src="https://i.pinimg.com/564x/2c/86/5c/2c865c778ee0060da6a72272fde16c69.jpg">
+İndirimler
+</div>
+
+<div class="feature">
+<img src="https://img.icons8.com/ios_filled/512w/FFFFFF/confetti.png">
+Etkinlikler
+</div>
+
+<div class="feature">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSowqElQMR6oekwq4k2UOVk6Ig_TkmMhyLmhQ&s">
+Sosyal Medya
+</div>
+
+<div class="feature">
+<img src="https://img.icons8.com/fluent-systems-filled/512/FFFFFF/news.png">
+Haberler
+</div>
+
+</div>
+
+<!-- COUNTDOWN -->
 <div class="countdown">
 
 <div class="time">
@@ -229,7 +244,7 @@ Kayseri'nin Super App'i KAYS, 1 Nisan 2026'da sizlerle buluşuyor. Tüm ihtiyaç
 
 </div>
 
-
+<!-- STORES -->
 <div class="stores">
 
 <a class="store" href="https://apps.apple.com/us/developer/rovand-ltd/id1877911901">
@@ -244,19 +259,29 @@ Google Play
 
 </div>
 
+<!-- CONTACT -->
+<div class="contact">
+contact@rovand.limited
 </div>
 
-
+</div>
 
 <script>
 
-const launch = new Date("2026-04-01T00:00:00").getTime()
+const launch = new Date("2026-05-20T00:00:00").getTime()
 
 setInterval(()=>{
 
 const now = new Date().getTime()
-
 const distance = launch - now
+
+if(distance < 0){
+document.getElementById("days").innerText = 0
+document.getElementById("hours").innerText = 0
+document.getElementById("minutes").innerText = 0
+document.getElementById("seconds").innerText = 0
+return
+}
 
 const days = Math.floor(distance / (1000*60*60*24))
 const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60))
@@ -271,7 +296,6 @@ document.getElementById("seconds").innerText = seconds
 },1000)
 
 </script>
-
 
 </body>
 </html>
